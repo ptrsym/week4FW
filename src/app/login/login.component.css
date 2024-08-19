@@ -1,0 +1,9 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input {
+    max-width: 15em;
+}
