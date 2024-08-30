@@ -1,2 +1,10 @@
-<h1>Accounts Page</h1>
+<div *ngIf="userNoValid">
+    <h1>Account details for {{ userNoValid.username }}</h1>
+  </div>
 <img src="garf.webp" alt="">
+<ul>
+    <li *ngFor="let key of getObjectKeys(userNoValid)">
+        {{key}}: {{userNoValid[key]}}
+    </li>
+</ul>
+

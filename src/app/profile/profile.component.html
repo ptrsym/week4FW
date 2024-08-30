@@ -1,0 +1,18 @@
+<div *ngIf="user">
+  <h1>Account details for {{ user.username }}</h1>
+</div>
+<div class="wrapper fadeInDown">
+  <form>
+    <div *ngFor="let field of getObjectKeys(userNoValid)">
+      <!-- Profile Form -->
+      <label [for]="field">{{ field | titlecase }}:</label>
+      <input
+        [id]="field"
+        [name]="field"
+        [(ngModel)]="user[field]"
+        [attr.type]="getInputType(field)"
+      />
+    </div>
+    <button type="button" (click)="updateDetails()">Save Changes</button>
+  </form>
+</div>

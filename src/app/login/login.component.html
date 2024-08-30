@@ -1,11 +1,10 @@
 <div class="wrapper fadeInDown">
     <div id="formContent">
       <!-- Login Form -->
-      <form class="content">
+      <form (ngSubmit)="onSubmit()" class="content">
         <input type="text" id="username" class="fadeIn second form__input" [(ngModel)]="username" name="username" placeholder="username">
         <input type="password" id="password" class="fadeIn third form__input" [(ngModel)]="password" name="password" placeholder="password">
-        <input type="submit" (click)="onSubmit()" class="fadeIn fourth form__input" value="Log In">
+        <input type="submit" class="fadeIn fourth form__input" value="Log In">
       </form> 
-      <div *ngIf="errorMessage" class="error-message"> {{errorMessage}}</div>
     </div>
   </div>
